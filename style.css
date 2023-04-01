@@ -17,7 +17,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 350px 1fr;
-  grid-template-rows: 225px auto;
+  grid-template-rows: 175px auto;
 }
 
 .header {
@@ -91,10 +91,11 @@ body {
   display: grid;
   grid-template-columns: 1.75fr 1fr;
   grid-template-rows: 1fr 1fr;
+  margin-bottom: 15px;
 }
 
 .header > * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* Search Box */
@@ -121,7 +122,8 @@ body {
 .header-user {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-right: 25px;
 }
 
 
@@ -132,13 +134,42 @@ body {
 
 .header-user > .user-icon {
   margin-right: 25px;
-  width: 80px;
-  height: 80px;
+  aspect-ratio: 1 / 1;
+  height: 55px;
   border-radius: 50%;
 }
 
 .header-user .username {
-  font-size: 1.80rem;
+  font-size: 1.40rem;
   font-weight: 400;
 }
 
+/* Welcome */
+
+.header-welcome {
+  display: flex;
+  padding-left: 35px;
+  align-items: center;
+
+}
+
+.header-welcome > img {
+  aspect-ratio: 1 / 1;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.header-welcome > .welcome-text {
+  padding-left: 25px;
+}
+
+.welcome-text > .welcome-sub {
+  font-size: 1.25rem;
+  padding-bottom: 8px;
+  font-weight: 400;
+}
+
+.welcome-text > .welcome-main {
+  font-size: 1.45rem;
+  font-weight: 400;
+}
