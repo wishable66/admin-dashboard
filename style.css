@@ -9,16 +9,14 @@
 body {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 175px 1fr;
 }
 
 /* Base Layout */
 
-.container {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  grid-template-rows: 175px auto;
-}
 
 .header {
   background-color: #FFFFFF;
@@ -94,9 +92,6 @@ body {
   margin-bottom: 15px;
 }
 
-.header > * {
-  /* border: 1px solid red; */
-}
 
 /* Search Box */
 
@@ -123,7 +118,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 25px;
+  margin-right: 50px;
 }
 
 
@@ -196,3 +191,124 @@ body {
 }
 
 
+/* Main */
+
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr
+}
+
+
+
+/* Project */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 55px;
+  grid-auto-rows: 1fr;
+  padding: 25px;
+  gap: 2rem;
+}
+
+.projects > h3 {
+  grid-column: 1 / -1;
+}
+
+.project-options > img {
+  aspect-ratio: 1 / 1;
+  width: 25px;
+}
+
+.project {
+  background-color: white;
+  padding: 10px;
+  border-left: 8px solid rgb(240,180,41);
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.project-text {
+  padding: 5px;
+}
+
+.project-text h5 {
+  padding-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.project-text p {
+  font-size: 1.05rem;
+}
+
+
+/* Announcements and Trending */
+
+.announce-trending {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+}
+.announcements h4 {
+  font-size: 1.25rem;
+  margin-bottom: 63px;
+}
+
+.announcements > .announces {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.announcement {
+  padding: 12px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 20px;
+}
+
+.announces > .privacy {
+  border: none;
+}
+
+
+
+.trending-user > img {
+  aspect-ratio: 1/1;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.trending > h4 {
+  font-size: 1.25rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.trending-users {
+  border-radius: 8px;
+  background-color: white;
+  padding: 20px;
+}
+
+.trending-user {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.trending-userinfo {
+  padding-left: 15px;
+  font-size: 1.05rem;
+}
+
+.trending-username {
+  padding-bottom: 5px;
+}
+
+.trending-usertitle {
+  color: #777777;
+}
